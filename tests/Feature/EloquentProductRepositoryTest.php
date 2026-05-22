@@ -47,7 +47,7 @@ class EloquentProductRepositoryTest extends TestCase
             'value_integer' => 1800,
         ]);
 
-        $repository = new EloquentProductRepository();
+        $repository = new EloquentProductRepository;
 
         $required = $repository->requiredAttributesForProduct($product->id);
         $domainProduct = $repository->findForPublication($product->id);

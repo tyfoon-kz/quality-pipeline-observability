@@ -11,9 +11,7 @@ class RecalculateProductSearchIndex implements ShouldQueue
 {
     use Queueable;
 
-    public function __construct(public int $productId)
-    {
-    }
+    public function __construct(public int $productId) {}
 
     public function handle(): void
     {

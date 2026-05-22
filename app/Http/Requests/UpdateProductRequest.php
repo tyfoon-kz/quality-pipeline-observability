@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Product;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -14,7 +15,7 @@ class UpdateProductRequest extends FormRequest
     {
         $product = $this->route('product');
 
-        return $product instanceof \App\Models\Product
+        return $product instanceof Product
             && ($this->user()?->can('update', $product) ?? false);
     }
 

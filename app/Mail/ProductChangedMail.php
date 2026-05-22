@@ -15,9 +15,7 @@ class ProductChangedMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public Product $product, public string $event)
-    {
-    }
+    public function __construct(public Product $product, public string $event) {}
 
     /**
      * Get the message envelope.

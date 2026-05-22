@@ -10,8 +10,7 @@ class PublishProductService
     public function __construct(
         private ProductRepository $products,
         private TransactionManager $transactions,
-    ) {
-    }
+    ) {}
 
     public function handle(PublishProductCommand $command): void
     {

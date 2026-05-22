@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class ProductAssetController extends Controller
 {
-    public function store(Request $request, Product $product): \Illuminate\Http\JsonResponse
+    public function store(Request $request, Product $product): JsonResponse
     {
         Gate::authorize('update', $product);
 

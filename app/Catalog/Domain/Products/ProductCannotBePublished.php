@@ -7,7 +7,7 @@ use DomainException;
 class ProductCannotBePublished extends DomainException
 {
     /**
-     * @param list<string> $missingAttributeCodes
+     * @param  list<string>  $missingAttributeCodes
      */
     public static function missingRequiredAttributes(array $missingAttributeCodes): self
     {

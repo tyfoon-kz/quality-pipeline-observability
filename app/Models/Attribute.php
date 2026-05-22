@@ -14,9 +14,13 @@ class Attribute extends Model
     use HasFactory;
 
     public const TYPE_STRING = 'string';
+
     public const TYPE_INTEGER = 'integer';
+
     public const TYPE_DECIMAL = 'decimal';
+
     public const TYPE_BOOLEAN = 'boolean';
+
     public const TYPE_TEXT = 'text';
 
     public const TYPES = [

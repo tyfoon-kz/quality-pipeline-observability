@@ -15,7 +15,8 @@ class PublishProductServiceTest extends TestCase
 {
     public function test_publish_product_service_uses_repository_contract(): void
     {
-        $repository = new class implements ProductRepository {
+        $repository = new class implements ProductRepository
+        {
             public ?ProductStatus $savedStatus = null;
 
             public ?int $actorId = null;
@@ -41,7 +42,8 @@ class PublishProductServiceTest extends TestCase
                 $this->actorId = $actorId;
             }
         };
-        $transactions = new class implements TransactionManager {
+        $transactions = new class implements TransactionManager
+        {
             public bool $wasCalled = false;
 
             public function run(callable $callback): mixed

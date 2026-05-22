@@ -12,9 +12,7 @@ class ProductChangedNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    public function __construct(public Product $product, public string $event)
-    {
-    }
+    public function __construct(public Product $product, public string $event) {}
 
     /**
      * Get the notification's delivery channels.

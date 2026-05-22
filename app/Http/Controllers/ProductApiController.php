@@ -8,6 +8,7 @@ use App\Http\Resources\ProductResource;
 use App\Jobs\RecalculateProductSearchIndex;
 use App\Models\Product;
 use App\Models\ProductAudit;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Gate;
 
@@ -69,7 +70,7 @@ class ProductApiController extends Controller
         return ProductResource::make($product->load(['category', 'unit', 'supplier']));
     }
 
-    public function destroy(Product $product): \Illuminate\Http\JsonResponse
+    public function destroy(Product $product): JsonResponse
     {
         Gate::authorize('delete', $product);
         $product->delete();

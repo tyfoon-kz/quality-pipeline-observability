@@ -5,14 +5,12 @@ namespace App\Catalog\Domain\Products;
 final readonly class RequiredAttributes
 {
     /**
-     * @param list<string> $codes
+     * @param  list<string>  $codes
      */
-    private function __construct(private array $codes)
-    {
-    }
+    private function __construct(private array $codes) {}
 
     /**
-     * @param list<string> $codes
+     * @param  list<string>  $codes
      */
     public static function fromCodes(array $codes): self
     {
@@ -20,8 +18,7 @@ final readonly class RequiredAttributes
     }
 
     /**
-     * @param list<string> $filledAttributeCodes
-     *
+     * @param  list<string>  $filledAttributeCodes
      * @return list<string>
      */
     public function missingFrom(array $filledAttributeCodes): array
