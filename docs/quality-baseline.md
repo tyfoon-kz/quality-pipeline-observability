@@ -34,6 +34,7 @@
 - Laravel Pint is now the explicit formatter for PHP code style.
 - PHPStan/Larastan is now configured at a starter level so the project can grow strictness deliberately.
 - Rector is now configured for controlled automated refactoring through dry-run and apply targets.
+- The testing strategy now separates unit/domain questions from Laravel feature and integration questions.
 
 ## Known Gaps Before This Course
 
