@@ -27,6 +27,7 @@
 | `scripts/pre-commit-quality.sh` | Runs fast local pre-commit checks | Style, static analysis and diff check pass | Added in lesson 04-02 |
 | `docs/pr-readiness.md` | Defines review readiness checklist | Review request names checks and remaining risks | Added in lesson 04-03 |
 | `docs/logging-guideline.md` | Defines structured logging rules | Important scenario logs safe context | Added in lesson 05-01 |
+| `/health/ready` and `make health` | Checks readiness dependencies | Database/cache readiness is reported | Added in lesson 05-02 |
 
 ## Existing Safety Net
 
@@ -47,6 +48,7 @@
 - Pre-commit fast checks are documented as a local filter, not as a replacement for CI.
 - PR readiness now has a short checklist and review description template.
 - Product publication now has structured logs and a logging guideline.
+- Readiness checks now verify database and cache dependency paths.
 
 ## Known Gaps Before This Course
 
@@ -59,7 +61,7 @@
 - CI workflow is present and follows the local `make qa` contract.
 - Pre-commit checks are documented and available through `scripts/pre-commit-quality.sh`.
 - Structured logging rules are documented for product publication.
-- Health/readiness checks are not part of the quality workflow yet.
+- Health/readiness checks are available through `/health/ready` and `make health`.
 - Architecture guards are not configured yet.
 
 ## Baseline Decision

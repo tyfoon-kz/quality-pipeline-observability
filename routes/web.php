@@ -22,6 +22,31 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/health/ready', function () {
+    $checks = [
+        'database' => false,
+        'cache' => false,
+    ];
+
+    try {
+        DB::select('select 1 as ok');
+        $checks['database'] = true;
+
+        Cache::put('health:ready:last-check', now()->toISOString(), now()->addMinute());
+        $checks['cache'] = Cache::has('health:ready:last-check');
+    } catch (\Throwable) {
+        return response()->json([
+            'ready' => false,
+            'checks' => $checks,
+        ], 503);
+    }
+
+    return response()->json([
+        'ready' => ! in_array(false, $checks, true),
+        'checks' => $checks,
+    ]);
+});
+
 Route::view('/session/name', 'session-name');
 Route::post('/session/name', function (Request $request) {
     $validated = $request->validate(['name' => ['required', 'string', 'max:80']]);
