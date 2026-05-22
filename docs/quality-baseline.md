@@ -23,6 +23,7 @@
 | `make test-coverage` | Runs PHPUnit coverage when Xdebug/PCOV is installed | Coverage report is produced or missing driver is explained | Added in lesson 03-02 |
 | `make test-parallel` | Runs Laravel tests in parallel through ParaTest | Test suite passes without shared-state flakes | Added in lesson 03-03 |
 | `make deploy-smoke` | Runs cheap runtime smoke checks | Runtime endpoints respond | Optional runtime check |
+| GitHub Actions `quality.yml` | Runs shared CI quality gate | `make qa` passes in a clean runner | Added in lesson 04-01 |
 
 ## Existing Safety Net
 
@@ -39,6 +40,7 @@
 - The testing strategy now separates unit/domain questions from Laravel feature and integration questions.
 - Coverage has a repeatable command and a critical gap document.
 - Parallel tests are available as a faster feedback loop and documented as a shared-state risk detector.
+- CI now repeats the local `make qa` quality gate in GitHub Actions.
 
 ## Known Gaps Before This Course
 
@@ -48,7 +50,7 @@
 - Rector is configured, but each diff still requires human review before commit.
 - Coverage reporting is documented and requires Xdebug or PCOV in the local environment.
 - Parallel tests are documented and available through `make test-parallel`.
-- CI workflow is not present in this repository yet.
+- CI workflow is present and follows the local `make qa` contract.
 - Pre-commit checks are not documented yet.
 - Structured logging rules are not documented yet.
 - Health/readiness checks are not part of the quality workflow yet.
