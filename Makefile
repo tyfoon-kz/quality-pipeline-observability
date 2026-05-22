@@ -1,4 +1,4 @@
-.PHONY: help install test check qa format lint-style analyse rector-dry rector migrate migrate-status build diff-check benchmark-baseline bootstrap-cost octane-up octane-down octane-logs octane-reload octane-watch front race-demo locking-demo memory-leak-demo octane-status benchmark-octane deploy-smoke
+.PHONY: help install test check qa format lint-style analyse rector-dry rector test-coverage migrate migrate-status build diff-check benchmark-baseline bootstrap-cost octane-up octane-down octane-logs octane-reload octane-watch front race-demo locking-demo memory-leak-demo octane-status benchmark-octane deploy-smoke
 
 help: ## Show available project commands
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "%-22s %s\n", $$1, $$2}'
@@ -9,6 +9,9 @@ install: ## Install PHP and frontend dependencies
 
 test: ## Run Laravel test suite
 	php artisan test
+
+test-coverage: ## Run tests with coverage report when a coverage driver is installed
+	bash scripts/test-coverage.sh
 
 check: ## Run smoke checks for the Laravel/Filament project
 	php -v

@@ -20,6 +20,7 @@
 | `make analyse` | Runs PHPStan/Larastan static analysis | Static analysis passes at the configured level | Added in lesson 02-02 |
 | `make rector-dry` | Previews Rector automated refactoring | Rector shows an empty or reviewable diff | Added in lesson 02-03 |
 | `make rector` | Applies Rector automated refactoring | Only reviewed mechanical changes are applied | Added in lesson 02-03 |
+| `make test-coverage` | Runs PHPUnit coverage when Xdebug/PCOV is installed | Coverage report is produced or missing driver is explained | Added in lesson 03-02 |
 | `make deploy-smoke` | Runs cheap runtime smoke checks | Runtime endpoints respond | Optional runtime check |
 
 ## Existing Safety Net
@@ -35,6 +36,7 @@
 - PHPStan/Larastan is now configured at a starter level so the project can grow strictness deliberately.
 - Rector is now configured for controlled automated refactoring through dry-run and apply targets.
 - The testing strategy now separates unit/domain questions from Laravel feature and integration questions.
+- Coverage has a repeatable command and a critical gap document.
 
 ## Known Gaps Before This Course
 
@@ -42,7 +44,7 @@
 - Formatting is now explicit through `make format` and `make lint-style`.
 - Static analysis is configured at a starter level and should become stricter over time.
 - Rector is configured, but each diff still requires human review before commit.
-- Coverage reporting is not part of the workflow yet.
+- Coverage reporting is documented and requires Xdebug or PCOV in the local environment.
 - Parallel tests are not documented as a normal feedback loop yet.
 - CI workflow is not present in this repository yet.
 - Pre-commit checks are not documented yet.
