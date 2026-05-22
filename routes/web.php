@@ -34,7 +34,7 @@ Route::get('/health/ready', function () {
 
         Cache::put('health:ready:last-check', now()->toISOString(), now()->addMinute());
         $checks['cache'] = Cache::has('health:ready:last-check');
-    } catch (\Throwable) {
+    } catch (Throwable) {
         return response()->json([
             'ready' => false,
             'checks' => $checks,
