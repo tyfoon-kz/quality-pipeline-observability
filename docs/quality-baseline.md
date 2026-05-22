@@ -28,6 +28,7 @@
 | `docs/pr-readiness.md` | Defines review readiness checklist | Review request names checks and remaining risks | Added in lesson 04-03 |
 | `docs/logging-guideline.md` | Defines structured logging rules | Important scenario logs safe context | Added in lesson 05-01 |
 | `/health/ready` and `make health` | Checks readiness dependencies | Database/cache readiness is reported | Added in lesson 05-02 |
+| `docs/runtime-signals.md` | Maps first runtime signals | Signals have source and future metric candidate | Added in lesson 05-03 |
 
 ## Existing Safety Net
 
@@ -49,6 +50,7 @@
 - PR readiness now has a short checklist and review description template.
 - Product publication now has structured logs and a logging guideline.
 - Readiness checks now verify database and cache dependency paths.
+- Runtime signals are mapped as a bridge to the metrics course.
 
 ## Known Gaps Before This Course
 
