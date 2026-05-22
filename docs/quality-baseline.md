@@ -25,6 +25,7 @@
 | `make deploy-smoke` | Runs cheap runtime smoke checks | Runtime endpoints respond | Optional runtime check |
 | GitHub Actions `quality.yml` | Runs shared CI quality gate | `make qa` passes in a clean runner | Added in lesson 04-01 |
 | `scripts/pre-commit-quality.sh` | Runs fast local pre-commit checks | Style, static analysis and diff check pass | Added in lesson 04-02 |
+| `docs/pr-readiness.md` | Defines review readiness checklist | Review request names checks and remaining risks | Added in lesson 04-03 |
 
 ## Existing Safety Net
 
@@ -43,6 +44,7 @@
 - Parallel tests are available as a faster feedback loop and documented as a shared-state risk detector.
 - CI now repeats the local `make qa` quality gate in GitHub Actions.
 - Pre-commit fast checks are documented as a local filter, not as a replacement for CI.
+- PR readiness now has a short checklist and review description template.
 
 ## Known Gaps Before This Course
 
