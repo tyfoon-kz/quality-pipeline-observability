@@ -26,6 +26,7 @@
 | GitHub Actions `quality.yml` | Runs shared CI quality gate | `make qa` passes in a clean runner | Added in lesson 04-01 |
 | `scripts/pre-commit-quality.sh` | Runs fast local pre-commit checks | Style, static analysis and diff check pass | Added in lesson 04-02 |
 | `docs/pr-readiness.md` | Defines review readiness checklist | Review request names checks and remaining risks | Added in lesson 04-03 |
+| `docs/logging-guideline.md` | Defines structured logging rules | Important scenario logs safe context | Added in lesson 05-01 |
 
 ## Existing Safety Net
 
@@ -45,6 +46,7 @@
 - CI now repeats the local `make qa` quality gate in GitHub Actions.
 - Pre-commit fast checks are documented as a local filter, not as a replacement for CI.
 - PR readiness now has a short checklist and review description template.
+- Product publication now has structured logs and a logging guideline.
 
 ## Known Gaps Before This Course
 
@@ -56,7 +58,7 @@
 - Parallel tests are documented and available through `make test-parallel`.
 - CI workflow is present and follows the local `make qa` contract.
 - Pre-commit checks are documented and available through `scripts/pre-commit-quality.sh`.
-- Structured logging rules are not documented yet.
+- Structured logging rules are documented for product publication.
 - Health/readiness checks are not part of the quality workflow yet.
 - Architecture guards are not configured yet.
 
