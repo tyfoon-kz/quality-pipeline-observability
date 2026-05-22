@@ -1,4 +1,4 @@
-.PHONY: help install test check qa format lint-style migrate migrate-status build diff-check benchmark-baseline bootstrap-cost octane-up octane-down octane-logs octane-reload octane-watch front race-demo locking-demo memory-leak-demo octane-status benchmark-octane deploy-smoke
+.PHONY: help install test check qa format lint-style analyse migrate migrate-status build diff-check benchmark-baseline bootstrap-cost octane-up octane-down octane-logs octane-reload octane-watch front race-demo locking-demo memory-leak-demo octane-status benchmark-octane deploy-smoke
 
 help: ## Show available project commands
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "%-22s %s\n", $$1, $$2}'
@@ -18,13 +18,16 @@ check: ## Run smoke checks for the Laravel/Filament project
 	npm --version
 	$(MAKE) test
 
-qa: lint-style check build diff-check ## Run the local quality entrypoint
+qa: lint-style analyse check build diff-check ## Run the local quality entrypoint
 
 format: ## Format PHP code with Laravel Pint
 	./vendor/bin/pint
 
 lint-style: ## Check PHP code style without changing files
 	./vendor/bin/pint --test
+
+analyse: ## Run PHPStan/Larastan static analysis
+	./vendor/bin/phpstan analyse --memory-limit=1G
 
 migrate: ## Apply database migrations
 	php artisan migrate

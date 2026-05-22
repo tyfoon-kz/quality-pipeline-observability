@@ -12,15 +12,18 @@ make qa
 
 `make check` is the basic smoke check. It verifies tool versions, validates Composer metadata and runs the Laravel test suite.
 
-`make qa` is the quality entrypoint. At this stage it runs the style check, `make check`, builds frontend assets and checks the Git diff for whitespace errors. It is intentionally still small. Later lessons add static analysis, Rector, coverage and other checks to this same entrypoint.
+`make qa` is the quality entrypoint. At this stage it runs the style check, static analysis, `make check`, builds frontend assets and checks the Git diff for whitespace errors. It is intentionally still small. Later lessons add Rector, coverage and other checks to this same entrypoint.
 
 `make format` applies Laravel Pint formatting. `make lint-style` runs Pint in check mode and fails when files need formatting.
+
+`make analyse` runs PHPStan with Larastan. The current level is a starter contract, not the final strictness goal.
 
 ## Current Contract
 
 ```text
 make check -> basic local confidence
 make format -> apply code style
+make analyse -> static analysis feedback
 make qa     -> readiness check before commit or review
 ```
 

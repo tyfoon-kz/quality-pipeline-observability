@@ -17,6 +17,7 @@
 | `make qa` | Runs the local quality entrypoint | Smoke checks, frontend build and diff check pass | Added in lesson 00-02 |
 | `make lint-style` | Checks PHP code style through Laravel Pint | Pint reports no formatting changes needed | Added in lesson 02-01 |
 | `make format` | Applies Laravel Pint formatting | PHP files are formatted | Added in lesson 02-01 |
+| `make analyse` | Runs PHPStan/Larastan static analysis | Static analysis passes at the configured level | Added in lesson 02-02 |
 | `make deploy-smoke` | Runs cheap runtime smoke checks | Runtime endpoints respond | Optional runtime check |
 
 ## Existing Safety Net
@@ -29,12 +30,13 @@
 - Frontend build exists through `npm run build` and `make build`.
 - `make qa` now combines the existing backend checks, frontend build and whitespace diff check.
 - Laravel Pint is now the explicit formatter for PHP code style.
+- PHPStan/Larastan is now configured at a starter level so the project can grow strictness deliberately.
 
 ## Known Gaps Before This Course
 
 - `make qa` is intentionally small at the start of the course and will grow as the project gains quality gates.
 - Formatting is now explicit through `make format` and `make lint-style`.
-- Static analysis is not configured yet.
+- Static analysis is configured at a starter level and should become stricter over time.
 - Rector is not configured yet.
 - Coverage reporting is not part of the workflow yet.
 - Parallel tests are not documented as a normal feedback loop yet.
