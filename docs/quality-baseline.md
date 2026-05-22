@@ -29,6 +29,7 @@
 | `docs/logging-guideline.md` | Defines structured logging rules | Important scenario logs safe context | Added in lesson 05-01 |
 | `/health/ready` and `make health` | Checks readiness dependencies | Database/cache readiness is reported | Added in lesson 05-02 |
 | `docs/runtime-signals.md` | Maps first runtime signals | Signals have source and future metric candidate | Added in lesson 05-03 |
+| `make test-architecture` | Runs architecture boundary checks | Presentation layer avoids catalog infrastructure dependency | Added in lesson 06-01 |
 
 ## Existing Safety Net
 
@@ -51,6 +52,7 @@
 - Product publication now has structured logs and a logging guideline.
 - Readiness checks now verify database and cache dependency paths.
 - Runtime signals are mapped as a bridge to the metrics course.
+- Architecture guard checks one boundary between presentation code and catalog infrastructure.
 
 ## Known Gaps Before This Course
 
@@ -64,7 +66,7 @@
 - Pre-commit checks are documented and available through `scripts/pre-commit-quality.sh`.
 - Structured logging rules are documented for product publication.
 - Health/readiness checks are available through `/health/ready` and `make health`.
-- Architecture guards are not configured yet.
+- First architecture guard is configured through `make test-architecture`.
 
 ## Baseline Decision
 
