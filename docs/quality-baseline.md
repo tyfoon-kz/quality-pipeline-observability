@@ -24,6 +24,7 @@
 | `make test-parallel` | Runs Laravel tests in parallel through ParaTest | Test suite passes without shared-state flakes | Added in lesson 03-03 |
 | `make deploy-smoke` | Runs cheap runtime smoke checks | Runtime endpoints respond | Optional runtime check |
 | GitHub Actions `quality.yml` | Runs shared CI quality gate | `make qa` passes in a clean runner | Added in lesson 04-01 |
+| `scripts/pre-commit-quality.sh` | Runs fast local pre-commit checks | Style, static analysis and diff check pass | Added in lesson 04-02 |
 
 ## Existing Safety Net
 
@@ -41,6 +42,7 @@
 - Coverage has a repeatable command and a critical gap document.
 - Parallel tests are available as a faster feedback loop and documented as a shared-state risk detector.
 - CI now repeats the local `make qa` quality gate in GitHub Actions.
+- Pre-commit fast checks are documented as a local filter, not as a replacement for CI.
 
 ## Known Gaps Before This Course
 
@@ -51,7 +53,7 @@
 - Coverage reporting is documented and requires Xdebug or PCOV in the local environment.
 - Parallel tests are documented and available through `make test-parallel`.
 - CI workflow is present and follows the local `make qa` contract.
-- Pre-commit checks are not documented yet.
+- Pre-commit checks are documented and available through `scripts/pre-commit-quality.sh`.
 - Structured logging rules are not documented yet.
 - Health/readiness checks are not part of the quality workflow yet.
 - Architecture guards are not configured yet.
