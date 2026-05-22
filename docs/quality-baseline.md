@@ -14,6 +14,7 @@
 | `make check` | Runs smoke checks and tests | PHP, Composer, validation and tests pass | Pending local run |
 | `make test` | Runs Laravel test suite | Test suite passes | Pending local run |
 | `make build` | Builds frontend assets | Vite build succeeds | Pending local run |
+| `make qa` | Runs the local quality entrypoint | Smoke checks, frontend build and diff check pass | Added in lesson 00-02 |
 | `make deploy-smoke` | Runs cheap runtime smoke checks | Runtime endpoints respond | Optional runtime check |
 
 ## Existing Safety Net
@@ -22,12 +23,13 @@
 - Unit tests cover the product publication application service and domain rules.
 - Runtime tests cover local diagnostic endpoints from the Octane course.
 - `composer validate --strict` is part of the existing `make check`.
-- `git diff --check` is available through `make qa` from the imported runtime project.
+- `git diff --check` is available through `make qa`.
 - Frontend build exists through `npm run build` and `make build`.
+- `make qa` now combines the existing backend checks, frontend build and whitespace diff check.
 
 ## Known Gaps Before This Course
 
-- `make qa` is still too small for a final quality gate.
+- `make qa` is intentionally small at the start of the course and will grow as the project gains quality gates.
 - Formatting is available through the Pint package, but the workflow is not explicit in Make.
 - Static analysis is not configured yet.
 - Rector is not configured yet.

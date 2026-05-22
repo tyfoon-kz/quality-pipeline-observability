@@ -18,7 +18,7 @@ check: ## Run smoke checks for the Laravel/Filament project
 	npm --version
 	$(MAKE) test
 
-qa: check diff-check ## Run final quality gate
+qa: check build diff-check ## Run the local quality entrypoint
 
 migrate: ## Apply database migrations
 	php artisan migrate
