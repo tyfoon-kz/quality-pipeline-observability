@@ -32,6 +32,7 @@
 | `make test-architecture` | Runs architecture boundary checks | Presentation layer avoids catalog infrastructure dependency | Added in lesson 06-01 |
 | `docs/architecture-quality-rules.md` | Explains architecture and quality rules | Rules are tied to concrete risks | Expanded in lesson 06-02 |
 | `docs/quality-dashboard.md` | Summarizes the quality system | Checks, CI, runtime signals and risks are visible | Added in lesson 07-01 |
+| `docs/quality-defense.md` | Defends the final quality pipeline | Automatic and manual risks are explained | Added in lesson 07-02 |
 
 ## Existing Safety Net
 
@@ -57,6 +58,7 @@
 - Architecture guard checks one boundary between presentation code and catalog infrastructure.
 - Quality rules now describe the risk they protect instead of acting as taste-based restrictions.
 - Quality dashboard summarizes the full local, CI, runtime and manual risk picture.
+- Quality defense explains what the pipeline catches and what still remains manual.
 
 ## Known Gaps Before This Course
 
