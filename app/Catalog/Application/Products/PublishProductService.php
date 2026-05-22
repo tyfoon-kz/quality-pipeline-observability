@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Catalog\Application\Products;
 
 use App\Catalog\Application\Support\TransactionManager;

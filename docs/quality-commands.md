@@ -18,12 +18,15 @@ make qa
 
 `make analyse` runs PHPStan with Larastan. The current level is a starter contract, not the final strictness goal.
 
+`make rector-dry` previews automated refactoring before any file is changed. `make rector` applies the diff only after the dry run looks safe.
+
 ## Current Contract
 
 ```text
 make check -> basic local confidence
 make format -> apply code style
 make analyse -> static analysis feedback
+make rector-dry -> preview mechanical refactoring
 make qa     -> readiness check before commit or review
 ```
 
