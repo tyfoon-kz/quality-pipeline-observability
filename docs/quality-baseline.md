@@ -30,6 +30,7 @@
 | `/health/ready` and `make health` | Checks readiness dependencies | Database/cache readiness is reported | Added in lesson 05-02 |
 | `docs/runtime-signals.md` | Maps first runtime signals | Signals have source and future metric candidate | Added in lesson 05-03 |
 | `make test-architecture` | Runs architecture boundary checks | Presentation layer avoids catalog infrastructure dependency | Added in lesson 06-01 |
+| `docs/architecture-quality-rules.md` | Explains architecture and quality rules | Rules are tied to concrete risks | Expanded in lesson 06-02 |
 
 ## Existing Safety Net
 
@@ -53,6 +54,7 @@
 - Readiness checks now verify database and cache dependency paths.
 - Runtime signals are mapped as a bridge to the metrics course.
 - Architecture guard checks one boundary between presentation code and catalog infrastructure.
+- Quality rules now describe the risk they protect instead of acting as taste-based restrictions.
 
 ## Known Gaps Before This Course
 
