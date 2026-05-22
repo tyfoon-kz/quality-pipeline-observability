@@ -31,6 +31,7 @@
 | `docs/runtime-signals.md` | Maps first runtime signals | Signals have source and future metric candidate | Added in lesson 05-03 |
 | `make test-architecture` | Runs architecture boundary checks | Presentation layer avoids catalog infrastructure dependency | Added in lesson 06-01 |
 | `docs/architecture-quality-rules.md` | Explains architecture and quality rules | Rules are tied to concrete risks | Expanded in lesson 06-02 |
+| `docs/quality-dashboard.md` | Summarizes the quality system | Checks, CI, runtime signals and risks are visible | Added in lesson 07-01 |
 
 ## Existing Safety Net
 
@@ -55,6 +56,7 @@
 - Runtime signals are mapped as a bridge to the metrics course.
 - Architecture guard checks one boundary between presentation code and catalog infrastructure.
 - Quality rules now describe the risk they protect instead of acting as taste-based restrictions.
+- Quality dashboard summarizes the full local, CI, runtime and manual risk picture.
 
 ## Known Gaps Before This Course
 
